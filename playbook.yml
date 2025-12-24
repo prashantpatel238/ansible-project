@@ -1,5 +1,5 @@
 - name: Install Java on Ansible-Management
-  hosts: tag_ansible-management
+  hosts: 13.127.194.85
   become: yes
   tasks:
     - name: Update apt cache
