@@ -1,0 +1,14 @@
+plugin: aws_ec2
+regions:
+  - ap-ap-south-1
+filters:
+  tag:Name:
+    - ansible-management
+    - ansible-config
+keyed_groups:
+  - key: tags.Name
+    prefix: tag
+hostnames:
+  - private-ip-address
+compose:
+  ansible_user: ubuntu

@@ -1,0 +1,11 @@
+- name: Install Java on Ansible-Management
+  hosts: tag_ansible-management
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+    - name: Install default JDK
+      apt:
+        name: default-jdk
+        state: present
