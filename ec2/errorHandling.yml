@@ -10,5 +10,5 @@
       loop:
         - openssl
         - openssh
-    - name: Verify if docker is installed
-      ansible.builtin.apt: docker --version
+    - name: Check if docker is installed
+      ansible.builtin.command: docker --version
