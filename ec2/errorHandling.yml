@@ -1,17 +1,12 @@
 ---
-- hosts : all
+- hosts: all
   become: true
 
   tasks:
-    -name: Make sure the packges openssl and openssh are upto date
-    ansible.builtin.apt:
-      name: "{{item}}"
-      state: latest
-    loop: 
-    - openssh
-    - openssl
-
-
-
-
-
+    - name: Make sure openssl and openssh are updted
+      ansible.builtin.apt:
+        name: "{{ item }}"
+        state: latest
+      loop:
+        - openssl
+        - openssh
