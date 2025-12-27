@@ -10,5 +10,6 @@
       loop:
         - openssl
         - openssh
+      ignore_errors: yes
     - name: Check if docker is installed
       ansible.builtin.command: docker --version
